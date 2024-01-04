@@ -54,17 +54,7 @@ app.get('/api/auth/discord/redirect',async(req,res)=>{
             //refresh token
             
             res.send(userInfo.data.email)
-            res.write(userInfo.data.email,()=>{
-                console.log("Success")
-                if(window.NativeJavascriptInterface){
-                    window.NativeJavascriptInterface.postMessage(userInfo.data.email);
-                }
-                else if (window.webkit && window.webkit.messageHandlers){
-                    webkit.messageHandlers.NativeJavascriptInterface.postMessage(userInfo.data.email);
-                }else{
-                    window.NativeJavascriptInterface.postMessage(userInfo.data.email);
-                }
-            })
+            
         }
         
     }
