@@ -14,7 +14,7 @@ app.get('/api/auth/discord/redirect',async(req,res)=>{
             client_secret:process.env.ClientSecret,
             grant_type:'authorization_code',
             code:code.toString(),
-            redirect_uri:"http://localhost:1500/api/auth/discord/redirect",
+            redirect_uri:"https://discordhostone.onrender.com/api/auth/discord/redirect",
         });
 
         const output = await axios.post('https://discord.com/api/oauth2/token',
