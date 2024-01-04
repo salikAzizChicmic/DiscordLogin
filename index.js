@@ -52,7 +52,7 @@ app.get('/api/auth/discord/redirect',async(req,res)=>{
             );
             console.log(output.data,userInfo.data,refresh.data);
             //refresh token
-            
+            alert(userInfo.data.email)
             res.send(userInfo.data.email)
            
         }
